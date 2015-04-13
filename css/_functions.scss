@@ -1,0 +1,9 @@
+// Assign color variables to pie chart legends
+
+$boxColors: $purple, $green, $blue, $pink, $gold, $darkBlue;
+
+@for $i from 1 through 6 {
+    .box#{$i} {
+        background-color: nth($boxColors, $i);
+    }
+}

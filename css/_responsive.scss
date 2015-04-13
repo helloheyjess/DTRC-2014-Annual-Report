@@ -1,0 +1,61 @@
+// Breakpoints
+$breakSmall: "only screen and (max-width: 450px)";
+$breakMedium: "only screen and (max-width: 940px)";
+$breakLarge: "only screen and (max-width: 1024px)";
+
+// Media Queries
+
+@media #{$breakLarge} {
+	.columnBox {
+		@include columns(1);
+	}
+	.supporters {
+		.columns {
+			@include columns(2);
+		}
+	}
+}
+
+@media #{$breakMedium} {
+	.leftFeature, .rightFeature {
+		width: 100%;
+		&:hover {
+			cursor: auto;
+		}
+	}
+	.supporters {
+		.columns {
+			@include columns(1);
+		}
+	}
+	.details {
+		p {
+			display: none;
+		}
+	}
+}
+
+@media #{$breakSmall} {
+	.columnBox {
+		border: none;
+		text-align: center;
+		p + p {
+			text-indent: none;
+		}
+		&::first-letter { 
+			float: none; 
+			font-size: 1em; 
+			margin-right: 0;
+			font-family: $baseFont;
+		}
+		img {
+			&.floated {
+				float: none;
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+
+

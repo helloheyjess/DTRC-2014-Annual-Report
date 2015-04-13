@@ -1,0 +1,335 @@
+img {
+	max-width: 100%;
+}
+
+//Wrapper Structure
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 75%;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.innerWrapper {
+	margin: 50px 0;
+}
+
+// Flex Box Structure
+
+.flexContainerColumn, .flexContainerRow {
+	@include flex;
+}
+
+.flexContainerColumn {
+	@include prefix(flex-direction, column);
+}
+
+.flexContainerRow {
+	@include prefix(flex-direction, row);
+}
+
+.flexItem {
+	text-align: left;
+	width: 50%;
+}
+
+// Column Structure
+.columnBox {
+	@include columns(2);
+	@include border();
+	padding: 25px;
+	text-align: left;
+	p {
+		&:first-child {
+			margin: 0;
+		}
+	}
+	p + p {
+		text-indent: 1.5em;
+	}
+	&::first-letter { 
+		float: left; 
+		font-size: 4em; 
+		margin-right: 10px;
+		font-family: Georgia; 
+		line-height: 1em;
+	}
+	img {
+		margin: 35px 0;
+		border-radius: 2px;
+		&.floated {
+			float: left;
+			margin: 25px 15px 10px 0;
+		}
+	}
+}
+
+// Menu
+.menuBars {
+	position: fixed;
+	z-index: 9;
+	padding: 15px;
+	margin: 15px;
+	text-shadow: $textShadow;
+	cursor: pointer;
+	right: 10px;
+}
+
+.nav {
+	@include overlay;
+	ul.navMenu {
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+// Overlay
+
+.close {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+	cursor: pointer;
+}
+
+// Chart and Legend Styles
+.statsContainer {
+	width: 100%;
+	margin: 0 auto;
+}
+.chart, .legend {
+	margin: 0 50px;
+}
+.legend {
+	text-align: left;
+	.flexContainerRow {
+		justify-content: flex-start;
+	}
+	h4 {
+		margin: 15px 0;
+	}
+	.box, .boxText {
+		margin: 5px 0;
+	}
+	.box {
+		border-radius: 2px;
+		width: 25px;
+		height: 25px;
+		margin-right: 10px;
+	}
+	.boxText {
+		p {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+// Header Section Styles
+
+.header {
+	background: url(../images/header.jpg) center no-repeat fixed;
+	background-size: cover;
+	min-height: 100vh;
+	.headerOverlay {
+		background: rgba($purple, 0.3);
+		min-height: 100vh;
+		@include prefix(display, flex);
+	}
+	.headerBox {
+		@include border();
+		text-align: center;
+		padding: 50px;
+		margin: auto;
+		max-width: 90%;
+		@include prefix(animation-duration, 2.5s);
+	}
+	.logo {
+		position: absolute;
+		margin: 30px;
+	}
+}
+
+// Vision Section Styles
+
+.vision {
+	.titlePage {
+		@include titlePage($green);
+	}
+	h3, h4 {
+		color: $green;
+	}
+}
+
+// Members Section Styles 
+
+.members {
+	.titlePage {
+		@include titlePage($purple);
+	}
+	h3, h4 {
+		color: $purple;
+	}
+	.standout {
+		@include standout($green);
+	}
+	// Member Spotlight Styles
+	.leftFeature, .rightFeature {
+		width: 50%;
+	}
+	.leftFeature {
+		@include feature('../images/kevin.jpg');
+	}
+	.rightFeature {
+		@include feature('../images/sophieanne.jpg')
+	}
+	#left, #right {
+		h4 {
+			color: $black;
+		}
+		display: none;
+	}
+	#left {
+		background: $blue;
+		a {
+			color: $darkBlue;
+		}
+	}
+	#right {
+		background: $purple;
+		a {
+			color: $darkPurple;
+		}
+	}
+}
+
+// Support Section Styles 
+
+.supporters  {
+	h3, h4 {
+		color: $pink;
+	}
+	.titlePage {
+		@include titlePage($gold);
+	}
+	.standout {
+		@include standout($purple);
+		span.dedication {
+			font-style: italic;
+			font-weight: $bold;
+			display: block;
+		}
+		img {
+			margin: 25px 0;
+		}
+	}
+	.caption {
+		background: $green;
+	}
+	.columns {
+		@include columns(3);
+	}
+
+}
+
+// Leadership Section Styles
+
+.leadership {
+	h3, h4 {
+		color: $green;
+	}
+	.titlePage {
+		@include titlePage($blue);
+	}
+	.standout {
+		@include standout($pink);
+	}
+}
+
+// Footer Styles
+
+.footer {
+	h3, h4 {
+		color: $green;
+	}
+	.flexItem {
+		// width: 50%;
+		text-align: left;
+	}
+	.social {
+		.fa {
+			margin: 20px 0px;
+			margin-right: 10px;
+		}
+		li {
+			display: inline-block;
+		}
+	}
+	button, input[type="submit"] {
+		background: $blue;
+		text-transform: uppercase;
+		box-shadow: 0 5px 0 $darkBlue;
+		border: 0;
+		padding: 10px;
+		outline: 0;
+		position: relative;
+		top: 0;
+		@include prefix(transition, all 0.25s);
+	}
+	input[type="submit"]:active {
+		top: 5px;
+		box-shadow: 0px 2px 0px $darkBlue;
+	}
+	input, textarea {
+		display: block;
+		width: 100%;
+		margin: 30px 0;
+		background: $black;
+		color: $white;
+		border: 1px dotted $white;
+		padding: 10px;
+	}
+	.button {
+		width: 50%;
+		margin: 20px 0;
+		background: $pink;
+		box-shadow: 0 5px 0 $darkPink;
+		&:active {
+			top: 5px;
+			box-shadow: 0px 2px 0px $darkPink;
+		}
+	}
+	.credits {
+		width: 400px;
+		margin: 0 auto;
+
+		.clickCredits {	
+			p {
+				color: $green;
+				text-decoration: underline;
+				cursor: pointer;
+				transition: all 0.25s;
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+	.fullCredits {
+		@include overlay;
+		ul li {
+			margin: 10px 0;
+		}
+	}
+	input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
+		color: #fff;
+	}
+	input::-webkit-input-placeholder:after,
+	textarea::-webkit-input-placeholder:after {
+		content: '*';
+		color: $pink;
+	}
+}

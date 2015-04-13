@@ -1,0 +1,71 @@
+// Typography
+	// Import Google Fonts
+	@import url(http://fonts.googleapis.com/css?family=Bitter:400|Open+Sans:300italic,400,700);
+
+	// Fonts
+	$baseFont: 'Open Sans', sans-serif;
+	$headerFont: 'Bitter', serif;
+	$baseFontSize: 1.175em;
+	$textShadow: 2px 2px 4px $black;
+	$bold: 700;
+
+	//Headings
+	h1, h2, h3 {
+		font-family: $headerFont;
+	}
+	h3, h4 {
+		text-transform: uppercase;
+	}
+	h1 {
+		text-shadow: $textShadow;
+	}
+	h3 {
+		font-size: 2.75em;
+	}
+	h4 {
+		margin-bottom: 0;
+	}
+
+	//General Typography
+	body {
+		font-family: $baseFont;
+		font-size: $baseFontSize;
+		background: $black;
+		color: $white;
+	}
+	p {
+		line-height: 1.5em;
+	}
+	a {
+		color: $green;
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	blockquote {
+		font-style: italic;
+		position: relative;
+		&:before {
+			content: "“";
+			font-family: 'Georgia', serif;
+			font-size: 4em;
+			position: absolute;
+			left: -45px;
+			color: $green;
+		}
+	}
+	.emphasis {
+		font-style: italic;
+	}
+
+	// Ordered and Unordered Lists
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li {
+			margin: 0px;
+		}
+	}

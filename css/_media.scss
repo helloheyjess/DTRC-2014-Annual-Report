@@ -1,0 +1,79 @@
+// Flickity Gallery Styles
+
+.caption {
+  background: $gold;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: $black;
+  font-style: italic;
+}
+
+// AnySlider Styles
+
+.slider {
+    overflow: auto;
+    position: relative;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    min-height: 400px;
+    a {
+    	background: $lightGreen;
+    	color: $black;
+    	font-weight: $bold;
+    	font-size: 2em;
+    	font-family: $headerFont;
+    	padding: 20px;
+    	text-decoration: none;
+    	&:hover {
+    		background: $white;
+    	}
+    }
+    .wrapper {
+    	padding: 0 100px;
+    }
+}
+
+.as-prev-arrow,
+.as-next-arrow {
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    $white-space: nowrap;
+    z-index: 1;
+}
+
+.as-prev-arrow {
+    left: 0;
+}
+
+.as-next-arrow {
+    background-position: -40px 0;
+    right: 0;
+}
+
+// Video Styles
+
+video {
+	width: 70%;
+}
+
+.videoWrapper {
+	cursor: pointer;
+	background: rgba($green, 0.8);
+	color: $black;
+	padding: 20px;
+	transition: all 0.25s ease-in-out;
+	p {
+		margin: 0;
+		font-size: 2em;
+	}
+	&:hover {
+		background: rgba($green, 1);
+	}
+}
+
+.videoOverlay {
+	@include overlay;
+}
+

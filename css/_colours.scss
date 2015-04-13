@@ -1,0 +1,23 @@
+// DTRC Brand Colors
+	$black: #222;
+	$white: #fff;
+	$blue: #75A7C5;
+	$green: #B4BE6C;
+	$pink: #A66797;
+	$purple: #9697BF;
+	$gold: #D5B96B;
+
+//Colour Variations
+	//Dark
+	$darkBlue: darken($blue, 25);
+	$darkGreen: darken($green, 25);
+	$darkPink: darken($pink, 25);
+	$darkPurple: darken($purple, 25);
+	$darkGold: darken($purple, 25);
+
+	//Light
+	$lightBlue: lighten($blue, 15);
+	$lightGreen: lighten($green, 15);
+	$lightPink: lighten($pink, 15);
+	$lightPurple: lighten($purple, 15);
+	$lightGold: lighten($gold, 15);
