@@ -1,6 +1,4 @@
-img {
-	max-width: 100%;
-}
+
 
 //Wrapper Structure
 
@@ -127,7 +125,6 @@ img {
 	}
 }
 
-// Header Section Styles
 
 .header {
 	background: url(../images/header.jpg) center no-repeat fixed;
@@ -224,9 +221,6 @@ img {
 		img {
 			margin: 25px 0;
 		}
-	}
-	.caption {
-		background: $green;
 	}
 	.columns {
 		@include columns(3);

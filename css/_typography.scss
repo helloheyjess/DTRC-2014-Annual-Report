@@ -69,3 +69,17 @@
 			margin: 0px;
 		}
 	}
+	ol {
+		margin: 0 auto;
+		padding: 0;
+		width: 60%;
+		text-align: left;
+		li {
+			padding-left: 20px;
+		}
+	}
+	
+	// Images
+	img {
+		max-width: 100%;
+	}

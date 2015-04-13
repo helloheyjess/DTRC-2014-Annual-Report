@@ -41,8 +41,8 @@ $(function(){
 		$('.fullCredits').fadeOut();
 	});
 
-	// Gallery
-	var $gallery = $('.gallery').flickity({
+	// OTM Gallery
+	var $otmgallery = $('.gallery').flickity({
 		//options
 		cellSelector: 'img',
 		imagesLoaded: true,
@@ -52,17 +52,31 @@ $(function(){
 		autoPlay: false,
 		pageDots: false
 	});
-	//Gallery Captions
+	//OTM Gallery Captions
 	var $otmcaption = $('.members .caption');
-	var $caption = $('.supporters .caption');
-	var flkty = $gallery.data('flickity');
+	var flkty = $otmgallery.data('flickity');
 
-	$gallery.on('cellSelect', function() {
+	$otmgallery.on('cellSelect', function() {
 		$otmcaption.text(flkty.selectedElement.alt)
 	});
 
-	$gallery.on('cellSelect', function() {
-		$donorcaption.text(flkty.selectedElement.alt)
+	//Donor Event Gallery
+	var $donorgallery = $('.donorGallery').flickity({
+		//options
+		cellSelector: 'img',
+		imagesLoaded: true,
+		percentPosition: false,
+		wrapAround: true,
+		freeScroll: true,
+		autoPlay: 5000,
+		pageDots: false
+	});
+	// Donor Gallery Captions
+	var $donorcaption = $('.supporters .caption');
+	var flkty1 = $donorgallery.data('flickity');
+
+	$donorgallery.on('cellSelect', function() {
+		$donorcaption.text(flkty1.selectedElement.alt)
 	});
 
 	// Smooth Scroll
