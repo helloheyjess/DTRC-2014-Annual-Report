@@ -173,9 +173,6 @@
 		@include standout($green);
 	}
 	// Member Spotlight Styles
-	.leftFeature, .rightFeature {
-		width: 50%;
-	}
 	.leftFeature {
 		@include feature('../images/kevin.jpg');
 	}
@@ -225,7 +222,6 @@
 	.columns {
 		@include columns(3);
 	}
-
 }
 
 // Leadership Section Styles
