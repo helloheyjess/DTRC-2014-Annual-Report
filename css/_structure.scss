@@ -126,13 +126,14 @@
 	}
 }
 
+//Header Styles
 
 .header {
 	background: url(../images/header.jpg) center no-repeat fixed;
 	background-size: cover;
 	min-height: 100vh;
 	.headerOverlay {
-		background: rgba($purple, 0.3);
+		background: rgba($purple, 0.4);
 		min-height: 100vh;
 		@include prefix(display, flex);
 	}
