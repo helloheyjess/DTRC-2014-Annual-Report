@@ -14,14 +14,17 @@ $breakLarge: "only screen and (max-width: 1024px)";
 			@include columns(2);
 		}
 	}
+	.footer {
+		.flexItem {
+			text-align: center;
+			width: 100%;
+		}
+	}
 }
 
 @media #{$breakMedium} {
 	.leftFeature, .rightFeature {
 		width: 100%;
-		&:hover {
-			cursor: auto;
-		}
 	}
 	.supporters {
 		.columns {

@@ -27,12 +27,6 @@
 	flex-direction: row;
 }
 
-.flexItem {
-	text-align: left;
-	width: 50%;
-	padding-right: 25px;
-}
-
 // Column Structure
 .columnBox {
 	@include columns(2);
@@ -247,6 +241,12 @@
 .footer {
 	h3, h4 {
 		color: $green;
+	}
+	.flexContainerRow {
+		text-align: left;
+	}
+	.flexItem {
+		width: 50%;
 	}
 	.social {
 		.fa {
