@@ -23,8 +23,11 @@ $breakLarge: "only screen and (max-width: 1024px)";
 }
 
 @media #{$breakMedium} {
-	.leftFeature, .rightFeature {
-		width: 100%;
+	#spotlight {
+		.flexItem {
+			width: 100%;
+		}
+		
 	}
 	.supporters {
 		.columns {
