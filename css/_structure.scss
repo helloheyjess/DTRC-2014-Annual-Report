@@ -126,28 +126,29 @@
 	}
 }
 
-
 .header {
 	background: url(../images/header.jpg) center no-repeat fixed;
 	background-size: cover;
-	min-height: 100vh;
+	display: flex;
+	-ms-flex-align: center;
+	position: relative;
 	.headerOverlay {
-		background: rgba($purple, 0.3);
 		min-height: 100vh;
-		display: flex;
+		height: 100%;
+		.logo {
+			position: absolute;
+			margin: 30px;
+			display: inline-block;
+		}
 	}
 	.headerBox {
 		@include border();
-		text-align: center;
-		padding: 50px;
-		margin: auto;
-		max-width: 90%;
-		animation-duration: 2.5s;
+ 		text-align: center;
+ 		padding: 50px;
+ 		margin: auto;
+ 		max-width: 90%;
 	}
-	.logo {
-		position: absolute;
-		margin: 30px;
-	}
+	
 }
 
 // Vision Section Styles
@@ -185,6 +186,7 @@
 			color: $black;
 		}
 		display: none;
+		width: 100%;
 	}
 	#left {
 		background: $blue;
