@@ -219,10 +219,12 @@
 		img {
 			margin: 25px 0;
 		}
+		.columns {
+			@include columns(3);
+			margin-bottom: 50px;
+		}
 	}
-	.columns {
-		@include columns(3);
-	}
+
 }
 
 // Leadership Section Styles
