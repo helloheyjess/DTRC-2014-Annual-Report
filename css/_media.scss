@@ -44,6 +44,7 @@
     left: 0;
 }
 .as-next-arrow {
+    background-position: -40px 0;
     right: 0;
 }
 .as-nav {
@@ -70,6 +71,7 @@ video {
 		background: rgba($green, 1);
 	}
 }
+
 .videoOverlay {
 	@include overlay;
 }
