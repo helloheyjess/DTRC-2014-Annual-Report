@@ -1,23 +1,14 @@
-// Vendor Prefixes
-
-@mixin prefix($rule, $value) {
-	-moz-#{$rule}: $value;
-	-webkit-#{$rule}: $value;
-	-o-#{$rule}: $value;
-	#{$rule}: $value;
-}
-
 // Flex Containers 
 @mixin flex {
-	@include prefix(display, flex);
-	@include prefix(justify-content, center);
-	@include prefix(flex-wrap, wrap);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 // Columns
 @mixin columns($columnCount) {
-	@include prefix(columns, $columnCount);
-	@include prefix(column-gap, 40px);
+	columns: $columnCount;
+	column-gap: 40px;
 }
 
 // Title Page Styles

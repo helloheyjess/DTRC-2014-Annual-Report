@@ -20,11 +20,11 @@
 }
 
 .flexContainerColumn {
-	@include prefix(flex-direction, column);
+	flex-direction: column;
 }
 
 .flexContainerRow {
-	@include prefix(flex-direction, row);
+	flex-direction: row;
 }
 
 .flexItem {
@@ -132,10 +132,18 @@
 	background: url(../images/header.jpg) center no-repeat fixed;
 	background-size: cover;
 	min-height: 100vh;
+	display: flex;
+	-ms-flex-align: center;
+	position: relative;
 	.headerOverlay {
-		background: rgba($purple, 0.4);
+		// background: rgba($purple, 0.4);
 		min-height: 100vh;
-		@include prefix(display, flex);
+		height: 100%;
+		.logo {
+			position: absolute;
+			margin: 30px;
+			display: inline-block;
+		}
 	}
 	.headerBox {
 		@include border();
@@ -143,11 +151,7 @@
 		padding: 50px;
 		margin: auto;
 		max-width: 90%;
-		@include prefix(animation-duration, 2.5s);
-	}
-	.logo {
-		position: absolute;
-		margin: 30px;
+		animation-duration: 2.5s;
 	}
 }
 
@@ -186,6 +190,7 @@
 			color: $black;
 		}
 		display: none;
+		width: 100%;
 	}
 	#left {
 		background: $blue;
@@ -265,7 +270,7 @@
 		outline: 0;
 		position: relative;
 		top: 0;
-		@include prefix(transition, all 0.25s);
+		transition: all 0.25s;
 	}
 	input[type="submit"]:active {
 		top: 5px;
