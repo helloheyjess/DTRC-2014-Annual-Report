@@ -1,10 +1,6 @@
 //Initiate WOW plugin for animations on scroll
 new WOW().init();
 
-// Initiate anyslider
-$('.slider').anyslider({
-});
-
 // jQuery
 $(function(){
 	//Fittext for Responsive Headlines
@@ -71,7 +67,7 @@ $(function(){
 			percentPosition: false,
 			wrapAround: true,
 			freeScroll: true,
-			autoPlay: 5000,
+			autoPlay: false,
 			pageDots: false
 		});
 		// Donor Gallery Captions

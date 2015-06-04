@@ -9,47 +9,6 @@
   font-style: italic;
 }
 
-// AnySlider Styles
-
-.slider {
-    overflow: auto;
-    position: relative;
-    touch-action: pan-y;
-    min-height: 400px;
-    a {
-    	background: $lightGreen;
-    	color: $black;
-    	font-weight: $bold;
-    	font-size: 2em;
-    	font-family: $headerFont;
-    	padding: 20px;
-    	text-decoration: none;
-    	&:hover {
-    		background: $white;
-    	}
-    }
-    .wrapper {
-    	padding: 0 100px;
-    }
-}
-.as-prev-arrow,
-.as-next-arrow {
-    overflow: hidden;
-    position: absolute;
-    top: 150px;
-    $white-space: nowrap;
-    z-index: 1;
-}
-.as-prev-arrow {
-    left: 0;
-}
-.as-next-arrow {
-    background-position: -40px 0;
-    right: 0;
-}
-.as-nav {
-    display: none;
-}
 
 // Video Styles
 
