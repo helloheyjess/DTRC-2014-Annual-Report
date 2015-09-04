@@ -92,12 +92,12 @@ $(function(){
 	        //Left
 	        $('.leftFeature').on('click', function() {
 	        	$('#right').slideUp();
-	        	$('#left').stop().slideToggle();
+	        	$('#left').slideToggle();
 	        });
 	        //Right
 	        $('.rightFeature').on('click', function() {
 	        	$('#left').slideUp();
-	        	$('#right').stop().slideToggle();
+	        	$('#right').slideToggle();
 	        });
 	    };
 
